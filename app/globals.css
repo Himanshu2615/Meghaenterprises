@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Industrial/Corporate Palette */
+        --background: 0 0% 100%;
+        /* Pure White */
+        --foreground: 210 11% 15%;
+        /* Dark Slate for text #212529 */
+
+        --card: 0 0% 100%;
+        --card-foreground: 210 11% 15%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 210 11% 15%;
+
+        --primary: 211 100% 35%;
+        /* #0056b3 - Trusted Blue */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 210 16% 93%;
+        /* Light Gray #f8f9fa */
+        --secondary-foreground: 210 11% 15%;
+
+        --muted: 210 16% 93%;
+        --muted-foreground: 215 16% 47%;
+
+        --accent: 9 80% 55%;
+        /* Industrial Orange/Red for Quotes */
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 211 100% 35%;
+
+        --radius: 0rem;
+        /* Boxy industrial look */
+    }
+
+    /* Enforce Light Mode for Industrial Reliability */
+    .dark {
+        --background: 0 0% 100%;
+        --foreground: 210 11% 15%;
+        --card: 0 0% 100%;
+        --card-foreground: 210 11% 15%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 210 11% 15%;
+        --primary: 211 100% 35%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 16% 93%;
+        --secondary-foreground: 210 11% 15%;
+        --muted: 210 16% 93%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 9 80% 55%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 211 100% 35%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground transition-colors duration-200;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    /* Strong Industrial Typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-bold text-[#0056b3];
+        /* Blue Headers */
+    }
+
+    h1 {
+        @apply text-4xl md:text-5xl uppercase tracking-tight;
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl md:text-3xl;
+    }
+
+    p {
+        @apply leading-relaxed text-slate-600;
+    }
+}
+
+/* Industrial Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
