@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, Facebook, Linkedin, Twitter, Menu, X, Search, MessageCircle } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_ITEMS = [
     { name: 'Home', href: '/' },
@@ -24,22 +23,22 @@ export function Header() {
     return (
         <>
             {/* === TOP BAR (Contact Info) === */}
-            <div className="bg-[#0056b3] text-white py-2 px-4 md:px-12 text-xs md:text-sm font-semibold flex flex-col md:flex-row justify-between items-center z-[100] relative border-b border-blue-800">
-                <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2">
-                        <Phone size={14} className="text-blue-200" />
+            <div className="bg-[#0056b3] text-white py-2 px-4 md:px-12 text-[10px] md:text-sm font-semibold flex flex-row overflow-x-auto no-scrollbar justify-between items-center z-[100] relative border-b border-blue-800 whitespace-nowrap">
+                <div className="flex items-center gap-4 md:gap-6">
+                    <div className="flex items-center gap-1.5 md:gap-2">
+                        <Phone size={12} className="text-blue-200" />
                         <span>+91 93251 47803/05/07</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <Mail size={14} className="text-blue-200" />
-                        <span>info@meghaenterprises.in</span>
+                    <div className="flex items-center gap-1.5 md:gap-2">
+                        <Mail size={12} className="text-blue-200" />
+                        <span className="hidden sm:inline">info@meghaenterprises.in</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <MessageCircle size={14} className="text-blue-200" />
-                        <a href="https://wa.me/919325147803" target="_blank" className="text-white hover:text-blue-100 transition-colors">WhatsApp Chat</a>
+                    <div className="flex items-center gap-1.5 md:gap-2">
+                        <MessageCircle size={12} className="text-blue-200" />
+                        <a href="https://wa.me/919325147803" target="_blank" className="text-white hover:text-blue-100 transition-colors">WhatsApp</a>
                     </div>
                 </div>
-                <div className="flex items-center gap-4 mt-2 md:mt-0">
+                <div className="hidden md:flex items-center gap-4">
                     <div className="flex gap-3">
                         <Link href="#" className="hover:text-blue-200 transaction-colors"><Facebook size={14} /></Link>
                         <Link href="#" className="hover:text-blue-200 transaction-colors"><Linkedin size={14} /></Link>
@@ -49,9 +48,8 @@ export function Header() {
             </div>
 
             {/* === MAIN NAVIGATION (Sticky) === */}
-            <header className="sticky top-0 w-full z-[99] bg-white border-b-4 border-gray-200 shadow-lg">
-                <div className="max-w-[1920px] mx-auto px-4 md:px-12 h-20 md:h-24 flex items-center justify-between">
-
+            <header className="sticky top-0 w-full z-[99] bg-white/95 backdrop-blur-md border-b-4 border-gray-200 shadow-lg">
+                <div className="max-w-[1920px] mx-auto px-4 md:px-12 h-16 md:h-24 flex items-center justify-between">
                     {/* LOGO */}
                     <Link href="/" className="flex-shrink-0 flex items-center gap-3">
                         <div className="relative h-12 w-12 md:h-16 md:w-16">
@@ -111,7 +109,7 @@ export function Header() {
             {/* === MOBILE MENU DRAWER === */}
             {isMobileMenuOpen && (
                 <div className="fixed inset-0 z-[98] bg-black/50 xl:hidden" onClick={() => setIsMobileMenuOpen(false)}>
-                    <div className="absolute top-[145px] left-0 w-full bg-white shadow-xl border-b-4 border-[#0056b3] flex flex-col" onClick={e => e.stopPropagation()}>
+                    <div className="absolute top-16 left-0 w-full bg-white shadow-xl border-b-4 border-[#0056b3] flex flex-col" onClick={e => e.stopPropagation()}>
                         {NAV_ITEMS.map((item) => (
                             <Link
                                 key={item.name}

@@ -82,17 +82,25 @@ export const metadata: Metadata = {
 
 import { PremiumUX } from '@/components/premium-ux';
 import { ScrollProgress } from '@/components/scroll-progress';
+import { PagePreloader } from '@/components/page-preloader';
+import { GoogleAnalytics } from '@/components/google-analytics';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-            <body className={`${openSans.variable} ${roboto.variable} font-sans min-h-screen flex flex-col relative transition-colors duration-300 bg-white text-slate-900`}>
+            <head>
+                {/* Fallback favicon to ensure mobile browser tabs use logo */}
+                <link rel="icon" href="/megha_logo.png" />
+            </head>
+            <body className={`${openSans.variable} ${roboto.variable} font-sans min-h-screen flex flex-col relative transition-colors duration-300 bg-white text-slate-900 overflow-x-hidden`}>
+                <GoogleAnalytics GA_MEASUREMENT_ID="G-F88N80W7EY" />
+                <PagePreloader />
                 <ScrollProgress />
                 <Providers>
                     <SmoothScroll>
                         <Header />
                         <PremiumUX />
-                        <main className="flex-1">{children}</main>
+                        <main className="flex-1 overflow-x-hidden">{children}</main>
                         <Footer />
                         <Chatbot />
                         <Toaster />
