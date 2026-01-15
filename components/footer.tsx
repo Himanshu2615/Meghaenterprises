@@ -89,8 +89,12 @@ export function Footer() {
 
             {/* Bottom Copyright Bar */}
             <div className="bg-black py-4 border-t border-gray-800">
-                <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-widest">
-                    <p>&copy; {currentYear} Megha Enterprises. All Rights Reserved.</p>
+                <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-widest gap-4">
+                    <div className="flex flex-col md:flex-row items-center gap-4">
+                        <p>&copy; {currentYear} Megha Enterprises. All Rights Reserved.</p>
+                        <span className="hidden md:inline text-gray-700">|</span>
+                        <p>Designed by <a href="https://himanshu-jha.vercel.app" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#0056b3] transition-colors font-bold underline underline-offset-4 decoration-[#0056b3]">Himanshu Jha</a></p>
+                    </div>
                     <div className="flex items-center gap-6 mt-2 md:mt-0">
                         <span>W3C Valid XHTML</span>
                         <span>Privacy Policy</span>
