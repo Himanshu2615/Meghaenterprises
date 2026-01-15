@@ -93,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel="icon" href="/megha_logo.png" />
             </head>
             <body className={`${openSans.variable} ${roboto.variable} font-sans min-h-screen flex flex-col relative transition-colors duration-300 bg-white text-slate-900 overflow-x-hidden`}>
-                <GoogleAnalytics GA_MEASUREMENT_ID="G-F88N80W7EY" />
+                <GoogleAnalytics GA_MEASUREMENT_ID="G-8ESDRSPCJF" />
                 <PagePreloader />
                 <ScrollProgress />
                 <Providers>
