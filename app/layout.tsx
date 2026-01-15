@@ -38,20 +38,20 @@ export const metadata: Metadata = {
         telephone: false,
     },
     icons: {
-        icon: '/favicon.ico', // Assuming standard favicon location, nextjs handles this usually or uses what is in /app
+        icon: '/megha_logo.png',
         shortcut: '/megha_logo.png',
         apple: '/megha_logo.png',
     },
     openGraph: {
         title: 'Megha Enterprises | Engineering Power for Tomorrow',
         description: 'ISO 9001:2015 Certified manufacturer of premium high voltage electrical components. Serving state boards and private contractors since 2004.',
-        url: 'https://www.meghenterpises.in',
+        url: 'https://www.meghaenterprises.in',
         siteName: 'Megha Enterprises',
         locale: 'en_IN',
         type: 'website',
         images: [
             {
-                url: '/megha_logo.png', // Ideally a larger og-image
+                url: '/megha_logo.png',
                 width: 800,
                 height: 600,
                 alt: 'Megha Enterprises Logo',

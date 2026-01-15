@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, Factory, Zap, Battery, Box, Cpu, Sun, Layers, Share2, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { supabase } from '@/lib/supabase';
+import { SectionPreloader } from '@/components/section-preloader';
 
 const CATEGORIES = [
     { id: 'fabrication', label: 'Fabrication', icon: Factory },
@@ -119,7 +120,11 @@ export function ProductsSection() {
 
                 {/* Product Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
-                    {dbProducts.length > 0 ? (
+                    {loading ? (
+                        <div className="col-span-full py-20">
+                            <SectionPreloader />
+                        </div>
+                    ) : dbProducts.length > 0 ? (
                         dbProducts.map((product) => (
                             <div key={product.id} className="bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 group">
                                 <div className="aspect-[4/3] relative bg-slate-50 p-8 flex items-center justify-center overflow-hidden">
