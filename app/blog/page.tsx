@@ -1,5 +1,15 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Technical Insights & Engineering Blog | Megha Enterprises',
+    description: 'Read technical articles, substation design insights, polymer vs porcelain isolator comparisons, and solar power innovations by Megha Enterprises.',
+    keywords: ['Megha Enterprises Blog', 'Electrical Engineering Articles', 'High Voltage Switchgear Insights', 'Solar Technology Updates'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/blog',
+    },
+};
 
 export default function BlogPage() {
     return (

@@ -1,12 +1,19 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { ProductsSection } from '@/components/sections/products';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { products } from '@/lib/products';
 import { ProductCard } from '@/components/ProductCard';
 import { PageBanner } from '@/components/page-banner';
 import { Box } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'High Voltage Electrical Products & Solar Solutions | Megha Enterprises',
+    description: 'Explore high-voltage electrical isolators (11kV to 132kV), air break switches, solar panels, power conditioning units, and custom sheet metal fabrication products manufactured by Megha Enterprises.',
+    keywords: ['Megha Enterprises Products', 'High Voltage Isolators', 'Air Break Switches', 'Solar Panels', 'Solar PCU', 'Feeder Pillar', 'PCC Panels', 'Megha Electricals Products'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/products',
+    },
+};
 
 export default function ProductsPage() {
     return (

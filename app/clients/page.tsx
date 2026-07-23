@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+    title: 'Our Clients & Partners | Megha Enterprises',
+    description: 'Trusted partner to leading electrical boards, EPC contractors, and industry leaders including MSEDCL, Adani Power, Tata Projects, L&T Construction, Siemens, ABB, Crompton, and Bajaj Electricals.',
+    keywords: ['Megha Enterprises Clients', 'MSEDCL Approved Supplier', 'Adani Power Partner', 'L&T Construction Supplier', 'Tata Projects Subcontractor'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/clients',
+    },
+};
 
 export default function ClientsPage() {
     return (

@@ -83,7 +83,25 @@ export function Footer() {
 
                     </div>
                 </div>
+            </div>
 
+            {/* SEO Keyword Index Strip */}
+            <div className="bg-[#121417] py-6 border-t border-gray-800 text-xs text-gray-400">
+                <div className="max-w-[1920px] mx-auto px-6 md:px-12">
+                    <p className="font-bold text-gray-300 uppercase tracking-widest text-[11px] mb-3">Popular Searches & Keywords:</p>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-gray-500">
+                        <Link href="/" className="hover:text-white transition-colors">Megha Enterprises</Link> |
+                        <Link href="/about" className="hover:text-white transition-colors">Megha Electricals</Link> |
+                        <Link href="/products" className="hover:text-white transition-colors">Megha Electrical Products</Link> |
+                        <Link href="/services" className="hover:text-white transition-colors">Electrical Contractors Aurangabad</Link> |
+                        <Link href="/products/category/solar" className="hover:text-white transition-colors">Solar Plant Installation Maharashtra</Link> |
+                        <Link href="/products/category/ht-line" className="hover:text-white transition-colors">High Voltage Isolators 11kV 33kV 132kV</Link> |
+                        <Link href="/products" className="hover:text-white transition-colors">Air Break Switches Manufacturer</Link> |
+                        <Link href="/services" className="hover:text-white transition-colors">HT LT Line Erection</Link> |
+                        <Link href="/about" className="hover:text-white transition-colors">Industrial Structural Fabrication MIDC Waluj</Link> |
+                        <Link href="/contact" className="hover:text-white transition-colors">Chhatrapati Sambhajinagar Electrical Equipment</Link>
+                    </div>
+                </div>
             </div>
 
             {/* Bottom Copyright Bar */}

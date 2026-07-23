@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
+import { products } from '@/lib/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://www.meghaenterprises.in'; // Assuming this is the domain, will use a placeholder if unsure, or localhost for dev. I'll use a likely production URL or placeholder. Given the email info@meghenterpises.in, I'll use https://www.meghenterpises.in
+    const baseUrl = 'https://www.meghaenterprises.in';
 
-    const routes = [
+    const staticRoutes = [
         '',
         '/about',
         '/products',
-        '/products/isolators',
         '/services',
         '/clients',
         '/gallery',
@@ -15,12 +15,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/video',
         '/enquiry',
         '/contact',
-    ].map((route) => ({
+        '/careers',
+        '/projects',
+        '/products/category/solar',
+        '/products/category/ht-line',
+    ];
+
+    const staticEntries = staticRoutes.map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: route === '' ? 1 : 0.8,
+        changeFrequency: route === '' ? ('daily' as const) : ('weekly' as const),
+        priority: route === '' ? 1.0 : route === '/products' || route === '/services' ? 0.9 : 0.8,
     }));
 
-    return routes;
+    const productEntries = products.map((product) => ({
+        url: `${baseUrl}/products/details/${product.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }));
+
+    return [...staticEntries, ...productEntries];
 }
+

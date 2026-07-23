@@ -1,11 +1,19 @@
-'use client';
-
+import type { Metadata } from 'next';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { PageBanner } from '@/components/page-banner';
 import { FileText } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Product & Project Quotation Enquiry | Megha Enterprises',
+    description: 'Submit technical specifications or product quotation requests for HT/LT isolators, air break switches, solar installations, and custom structural fabrication from Megha Enterprises.',
+    keywords: ['Megha Enterprises Enquiry', 'Electrical Quotation Request', 'Megha Electricals Inquiry', 'Solar Plant Quotation Aurangabad'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/enquiry',
+    },
+};
 
 export default function EnquiryPage() {
     return (

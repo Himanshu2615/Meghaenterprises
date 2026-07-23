@@ -1,8 +1,16 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { ServicesSection } from '@/components/sections/services';
 import { PageBanner } from '@/components/page-banner';
 import { Settings } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Services & Substation EPC | Megha Enterprises Electrical & Solar Solutions',
+    description: 'Comprehensive EPC services including HT/LT line erection, substation erection, solar plant turn-key solutions, and industrial structural fabrication services by Megha Enterprises.',
+    keywords: ['HT LT Line Erection Services', 'Substation Erection Aurangabad', 'Solar Power Plant EPC', 'Electrical Contractors Maharashtra', 'Megha Enterprises Services', 'Industrial Fabrication Services'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/services',
+    },
+};
 
 export default function ServicesPage() {
     return (

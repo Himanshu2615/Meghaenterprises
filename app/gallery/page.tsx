@@ -1,5 +1,15 @@
+import type { Metadata } from 'next';
 import { PageBanner } from '@/components/page-banner';
 import { Camera } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Project Gallery | Megha Enterprises - Electrical & Solar Showcase',
+    description: 'Visual gallery of Megha Enterprises high-voltage isolator manufacturing, solar plant installations, and industrial structural fabrication projects.',
+    keywords: ['Megha Enterprises Gallery', 'Electrical Installation Photos', 'Solar Power Plant Showcase', 'Industrial Fabrication Gallery'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/gallery',
+    },
+};
 
 export default function GalleryPage() {
     return (

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -104,6 +105,29 @@ const categories = {
     }
 
 };
+
+
+
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
+    const { category } = await params;
+    const categoryData = categories[category as keyof typeof categories];
+
+    if (!categoryData) {
+        return {
+            title: 'Product Category | Megha Enterprises',
+            description: 'Explore high quality electrical and solar products by Megha Enterprises.',
+        };
+    }
+
+    return {
+        title: `${categoryData.title} | Megha Enterprises Electrical & Solar`,
+        description: `${categoryData.description}. High performance electrical isolators, solar equipment, and industrial switchgear manufactured by Megha Enterprises.`,
+        keywords: [`Megha Enterprises ${categoryData.title}`, categoryData.title, 'Megha Electricals', 'Aurangabad Electrical Supplier'],
+        alternates: {
+            canonical: `https://www.meghaenterprises.in/products/category/${category}`,
+        },
+    };
+}
 
 export function generateStaticParams() {
     return Object.keys(categories).map((category) => ({

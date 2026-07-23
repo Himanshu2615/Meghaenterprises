@@ -1,5 +1,15 @@
+import type { Metadata } from 'next';
 import { PageBanner } from '@/components/page-banner';
 import { Play } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Manufacturing & Testing Videos | Megha Enterprises',
+    description: 'Watch video tours of Megha Enterprises electrical manufacturing plant, high voltage isolator testing facilities, and industrial fabrication process.',
+    keywords: ['Megha Enterprises Videos', 'Electrical Manufacturing Tour', 'High Voltage Isolator Testing', 'Solar Fabrication Video'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/video',
+    },
+};
 
 export default function VideoPage() {
     return (

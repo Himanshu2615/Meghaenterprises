@@ -1,8 +1,35 @@
+import type { Metadata } from 'next';
 import { products } from '@/lib/products';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, ShieldCheck, Zap, Factory } from 'lucide-react';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params;
+    const product = products.find((p) => p.id === id);
+
+    if (!product) {
+        return {
+            title: 'Product Details | Megha Enterprises',
+            description: 'High quality electrical equipment by Megha Enterprises.',
+        };
+    }
+
+    return {
+        title: `${product.title} | Megha Enterprises Electrical Solutions`,
+        description: `${product.description} Manufactured by Megha Enterprises (Megha Electricals), Chhatrapati Sambhajinagar (Aurangabad), Maharashtra.`,
+        keywords: [product.title, product.category, 'Megha Enterprises', 'Megha Electricals', 'High Voltage Electrical Equipment'],
+        alternates: {
+            canonical: `https://www.meghaenterprises.in/products/details/${product.id}`,
+        },
+        openGraph: {
+            title: `${product.title} | Megha Enterprises`,
+            description: product.description,
+            images: [product.image],
+        },
+    };
+}
 
 // This is required for static site generation with dynamic routes
 export function generateStaticParams() {

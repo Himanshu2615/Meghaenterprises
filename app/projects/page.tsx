@@ -1,7 +1,14 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { ProjectsSection } from '@/components/sections/projects';
-import { motion } from 'framer-motion';
+
+export const metadata: Metadata = {
+    title: 'Project Portfolio & Infrastructure Milestones | Megha Enterprises',
+    description: 'Explore completed power substation, high-voltage HT/LT line erection, and solar power plant installation projects executed by Megha Enterprises across Maharashtra & India.',
+    keywords: ['Megha Enterprises Projects', 'Electrical Projects Aurangabad', 'Substation Erection Projects', 'Solar Installation Portfolio', 'Megha Engineering Milestones'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/projects',
+    },
+};
 
 export default function ProjectsPage() {
     return (
@@ -12,28 +19,15 @@ export default function ProjectsPage() {
                 <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] dark:opacity-5 mix-blend-overlay" />
 
                 <div className="mx-auto max-w-[1920px] px-6 md:px-12 relative z-10 text-center">
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-industrial-blue font-mono tracking-[0.3em] uppercase text-xs mb-8 inline-block"
-                    >
+                    <p className="text-industrial-blue font-mono tracking-[0.3em] uppercase text-xs mb-8 inline-block">
                         {'// Global Portfolio'}
-                    </motion.p>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-6xl md:text-9xl font-heading font-black text-black dark:text-white uppercase tracking-tighter leading-none mb-8"
-                    >
+                    </p>
+                    <h1 className="text-6xl md:text-9xl font-heading font-black text-black dark:text-white uppercase tracking-tighter leading-none mb-8">
                         Project <span className="text-gray-300 dark:text-gray-700">Dossier.</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="mt-6 text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed border-l-2 border-industrial-blue/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0"
-                    >
+                    </h1>
+                    <p className="mt-6 text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed border-l-2 border-industrial-blue/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
                         A comprehensive display of our industrial engineering milestones and fabrication excellence.
-                    </motion.p>
+                    </p>
                 </div>
             </section>
 

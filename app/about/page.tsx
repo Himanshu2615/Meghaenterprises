@@ -1,9 +1,17 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { AboutSection } from '@/components/sections/about';
 import { CertificationsSection } from '@/components/sections/certifications';
 import { PageBanner } from '@/components/page-banner';
 import { Info } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'About Us | Megha Enterprises - Premier Electrical & Solar Engineering',
+    description: 'Learn about Megha Enterprises (Megha Electricals), a leading manufacturer of high-voltage isolators, solar EPC solutions, and industrial fabrication in Chhatrapati Sambhajinagar (Aurangabad), Maharashtra since 2011.',
+    keywords: ['About Megha Enterprises', 'Megha Electricals', 'Electrical Engineering Aurangabad', 'Megha Engineering Vision', 'ISO 9001:2015 Electrical Manufacturer'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/about',
+    },
+};
 
 export default function AboutPage() {
     return (

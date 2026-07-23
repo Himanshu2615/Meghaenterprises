@@ -24,14 +24,14 @@ export function HeroSection() {
             <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 py-12 md:py-0 w-full flex flex-col justify-center flex-grow">
                 <div className="max-w-3xl text-white mt-12 md:mt-0">
                     <div className="inline-block bg-[#0056b3] px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
-                        ISO 9001:2015 Certified
+                        ISO 9001:2015 Certified Electrical Manufacturer
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight drop-shadow-xl">
-                        Premier Electrical, Solar & <br />
-                        <span className="text-yellow-400">Fabrication Solutions</span>
+                        Megha Enterprises | Premier Electrical, Solar & <br />
+                        <span className="text-yellow-400">Industrial Fabrication Solutions</span>
                     </h1>
                     <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed font-light border-l-4 border-[#0056b3] pl-4 drop-shadow-md max-w-2xl">
-                        Leading manufacturer of High-Voltage Isolators, Industrial Fabrication, and Solar Infrastructure since 2011. ISO 9001:2015 Certified experts delivering reliability across India.
+                        Megha Enterprises (Megha Electricals) is a leading ISO 9001:2015 certified manufacturer of High-Voltage Isolators (11kV-132kV), HT/LT Switchgear Lines, Solar Power Plants, and Heavy Structural Industrial Fabrication since 2011.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">

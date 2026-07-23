@@ -1,9 +1,16 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/contact';
-import { motion } from 'framer-motion';
 import { PageBanner } from '@/components/page-banner';
-import { MapPin, Phone, Mail, Globe } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'Contact Us | Megha Enterprises - Electrical & Solar Manufacturer',
+    description: 'Contact Megha Enterprises (Megha Electricals) in MIDC Waluj, Chhatrapati Sambhajinagar (Aurangabad). Phone: +91 93251 47803, Email: info@meghaenterprises.in. Get free quotes for electrical switchgear and solar EPC.',
+    keywords: ['Contact Megha Enterprises', 'Megha Electricals Address', 'MIDC Waluj Electrical Manufacturer', 'Aurangabad Electrical Contact', 'Megha Engineering Phone Number'],
+    alternates: {
+        canonical: 'https://www.meghaenterprises.in/contact',
+    },
+};
 
 export default function ContactPage() {
     return (
